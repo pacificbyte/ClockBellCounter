@@ -34,7 +34,7 @@ public class ClockBellCounterTest
     }
     
     @Test
-    public void countBells_exactHoursAfternoo()
+    public void countBells_exactHoursAfternoon()
     {
         startTime = LocalTime.of(14, 0);
         endTime = LocalTime.of(15, 0);
