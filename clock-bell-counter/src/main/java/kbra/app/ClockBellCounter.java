@@ -12,9 +12,9 @@ public class ClockBellCounter {
         String[] start = startTime.split(":");
         String[] end = endTime.split(":");
         
-        Integer startHour = convertMilitaryHoursToStandartHours(Integer.parseInt(start[0]));
+        Integer startHour = militaryToStandard(Integer.parseInt(start[0]));
         Integer startMinutes = Integer.parseInt(start[1]);
-        Integer endHour = convertMilitaryHoursToStandartHours(Integer.parseInt(end[0]));
+        Integer endHour = militaryToStandard(Integer.parseInt(end[0]));
         Integer endMinutes = Integer.parseInt(end[1]);
         
         
@@ -46,7 +46,7 @@ public class ClockBellCounter {
         return rings;
     }
 
-    private Integer convertMilitaryHoursToStandartHours(int militaryHoursTime) {
+    private Integer militaryToStandard(int militaryHoursTime) {
         Integer standardHoursTime = 0;
         
         if(militaryHoursTime > 12) {
